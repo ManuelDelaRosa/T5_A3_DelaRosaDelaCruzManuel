@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#304769"
+    android:gravity="center">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <RadioButton
+                    android:id="@+id/rbNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Num. Control" />
+
+                <RadioButton
+                    android:id="@+id/rbNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_nombre_alumno" />
+
+                <RadioButton
+                    android:id="@+id/rbPA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Primer Ap." />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/caja_num_control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@android:color/white"
+                android:hint="@string/hint_numero_control"
+                android:padding="10dp" />
+
+            <Button
+                android:id="@+id/btn_Consultar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="consultarAlumno"
+                android:text="@string/txt_btn_consultar" />
+
+            <RadioGroup
+                android:id="@+id/rbGr"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <RadioButton
+                    android:id="@+id/rbLA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="L.A." />
+
+                <RadioButton
+                    android:id="@+id/rbCP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C.P." />
+
+                <RadioButton
+                    android:id="@+id/rbIIA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I.I.A." />
+
+                <RadioButton
+                    android:id="@+id/rbIM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I.M." />
+
+                <RadioButton
+                    android:id="@+id/rbISC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I.S.C." />
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ListView
+        android:id="@+id/lsl_consulta"
+        android:layout_width="match_parent"
+        android:layout_height="433dp" />
+
+</LinearLayout>
